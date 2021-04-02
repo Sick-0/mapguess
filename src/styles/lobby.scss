@@ -1,0 +1,21 @@
+/* leny/enigjewo
+ *
+ * /src/styles/lobby.scss - Game Lobby styles
+ *
+ * coded by leny@BeCode
+ * started at 09/02/2021
+ */
+
+.lobby {
+    &__map {
+        min-height: 33vh;
+        height: 100%;
+        &--extended {
+            min-height: 66vh;
+        }
+    }
+    &__player-icon {
+        vertical-align: middle;
+    }
+}
+

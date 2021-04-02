@@ -1,0 +1,122 @@
+/* leny/enigjewo
+ *
+ * /src/styles/game/roadmap.scss - Roadmap styles
+ *
+ * coded by leny@BeCode
+ * started at 02/02/2021
+ */
+
+.roadmap {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    z-index: 100;
+    &__tools {
+        position: relative;
+    }
+    &__notes {
+        position: absolute;
+        bottom: calc(100% + .25rem);
+        left: 0;
+        transition: width .25s ease-in-out, height .25s ease-in-out;
+        width: 100%;
+        height: 320px;
+        > textarea {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__map {
+        width: 300px;
+        height: 180px;
+    }
+    &--is-docked {
+        position: static;
+        opacity: 1;
+        .roadmap__map {
+            width: 100vw;
+            height: 25vh;
+            transition: height .125s ease-in;
+        }
+        .roadmap__tools {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 1rem;
+        }
+        .roadmap__notes {
+            width: 30vw;
+            margin-left: 1rem;
+        }
+        &.roadmap--size-medium {
+            .roadmap__map {
+                height: 45vh;
+            }
+        }
+        &.roadmap--size-big {
+            .roadmap__map {
+                height: 65vh;
+            }
+            .roadmap__notes {
+                height: 12.5vh;
+                > textarea {
+                    min-height: 0;
+                }
+            }
+        }
+    }
+    &--is-pinned {
+        opacity: 1;
+        .roadmap__map {
+            width: 40vw;
+            height: 35vh;
+        }
+        &.roadmap--size-medium {
+            .roadmap__map {
+                width: 55vw;
+                height: 45vh;
+            }
+        }
+        &.roadmap--size-big {
+            .roadmap__map {
+                width: 75vw;
+                height: 60vh;
+            }
+            .roadmap__notes {
+                height: 15vh;
+            }
+        }
+    }
+    &--is-floating {
+        opacity: 0.5;
+        transition: opacity .25s ease-in-out;
+        .roadmap__map {
+            transition: width .125s ease-in .33s, height .125s ease-in .33s;
+        }
+        .roadmap__notes {
+            height: 240px;
+        }
+        &:hover {
+            opacity: 1;
+            .roadmap__map {
+                width: 40vw;
+                height: 35vh;
+                transition: width .125s ease-in, height .125s ease-in;
+            }
+            &.roadmap--size-medium {
+                .roadmap__map {
+                    width: 55vw;
+                    height: 45vh;
+                }
+            }
+            &.roadmap--size-big {
+                .roadmap__map {
+                    width: 75vw;
+                    height: 60vh;
+                }
+                .roadmap__notes {
+                    height: 15vh;
+                }
+            }
+        }
+    }
+}

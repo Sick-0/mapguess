@@ -1,0 +1,30 @@
+/* leny/enigjewo
+ *
+ * /src/styles/main.scss - Main styles
+ *
+ * coded by leny@BeCode
+ * started at 05/02/2021
+ */
+
+html {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    min-height: 100vh;
+    padding: 1px 0 0;
+    backdrop-filter: blur(5px) sepia(.5);
+}
+
+.is-block {
+    display: block;
+}
